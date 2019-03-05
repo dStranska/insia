@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 text-center">
+      <h3>Login</h3>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+
+    <div class="col-md-4 offset-md-4">
+
+      <%= form_with :url => sessions_path, :method => :post, :local => true do |f| %>
+        <div class="form-group">
+
+          <%= f.text_field :email, autocomplete: "email", class: "form-control", placeholder: 'Email' %>
+          <%= f.password_field :password, autocomplete: "password", class: "form-control mt-1", placeholder: 'Password' %>
+          <%= f.submit 'Login', class: "btn btn-secondary btn-block mt-2" %>
+
+        </div>
+
+      <% end %>
+      <hr/>
+      <div class="text-center">
+        <%= link_to 'Registration', new_user_path %>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

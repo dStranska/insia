@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 text-center">
+      <h3>Add Number</h3>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+
+    <div class="col-md-4 offset-md-4">
+
+      <%= form_for  @number,local: true, method: :put do |f| %>
+
+        <div class="form-group">
+          <%= f.text_field :phone, autocomplete: "number", class: "form-control", placeholder: 'Number', required: true, value: @number.phone %>
+          <%= f.text_area :description, size: '50x10', autocomplete: "description", class: "form-control mt-1", placeholder: 'Note',value: @number.description , required: true %>
+          <%= f.submit 'Edit', class: "btn btn-secondary btn-block mt-2" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+</div>
+

@@ -1,0 +1,12 @@
+<% if errors.any? %>
+
+    <div class="form-error-message">
+      <ul>
+        <% errors.each do |m| %>
+         <li> <%= m %></li>
+        <% end %>
+      </ul>
+
+    </div>
+
+<% end %>
